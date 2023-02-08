@@ -124,5 +124,5 @@ USE_TZ = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
-CSRF_TRUSTED_ORIGINS = ['http://*.toluka.es','http://*.127.0.0.1','https://*.toluka.es','https://*.127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['http://*.toluka.es','http://*.127.0.0.1','https://*.toluka.es','https://*.127.0.0.1','https://django.toluka.es']
 DEFAULT_AUTO_FIELD='django.db.models.AutoField' 
