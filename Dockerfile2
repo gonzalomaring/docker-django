@@ -1,0 +1,3 @@
+FROM python:3
+MAINTAINER Gonzalo Marin Gomez
+RUN pip install django mysqlclient && git clone https://github.com/gonzalomaring/docker-django.git /usr/src/app && mkdir static
