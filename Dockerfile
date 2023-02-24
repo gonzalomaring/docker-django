@@ -2,7 +2,7 @@ FROM gonzalomarin/base_practica
 WORKDIR /usr/src/app
 MAINTAINER Gonzalo Marin Gomez
 #RUN pip install django mysqlclient && git clone https://github.com/gonzalomaring/docker-django.git /usr/src/app && mkdir static
-ADD djaPngo_polls.sh /usr/src/app
+ADD django_polls.sh /usr/src/app
 RUN chmod +x /usr/src/app/django_polls.sh
 ENV ALLOWED_HOSTS=*
 ENV HOST=mariadb
