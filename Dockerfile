@@ -1,7 +1,6 @@
 FROM python:3
 WORKDIR /usr/src/app
 MAINTAINER Gonzalo Marin Gomez
-ENV HTTP_PROXY=http://172.29.0.1:8888
 RUN pip install django mysqlclient && git clone https://github.com/gonzalomaring/docker-django.git /usr/src/app && mkdir static
 ADD django_polls.sh /usr/src/app
 RUN chmod +x /usr/src/app/django_polls.sh
