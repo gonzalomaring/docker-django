@@ -27,6 +27,6 @@ services:
       MARIADB_USER: django
       MARIADB_PASSWORD: django
     volumes:
-      - mariadb_data_django:/var/lib/mysql
+      - mariadb_data_django2:/var/lib/mysql
 volumes:
     mariadb_data_django2:
