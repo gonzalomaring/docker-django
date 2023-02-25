@@ -63,6 +63,7 @@ pipeline {
                 stage ('SSH') {
                     steps{
                         sshagent(credentials : ['SSH_GONZALO']) {
+                            sh 'ssh -o StrictHostKeyChecking=no gonzalo@atreus.toluka.es sudo docker rmi -f gonzalomarin/practica-jenkins'
                             sh 'ssh -o StrictHostKeyChecking=no gonzalo@atreus.toluka.es wget https://raw.githubusercontent.com/gonzalomaring/docker-django/main/docker-compose.yaml -O docker-compose.yaml'
                             sh 'ssh -o StrictHostKeyChecking=no  gonzalo@atreus.toluka.es sudo docker-compose up -d --force-recreate'
         }
@@ -70,12 +71,5 @@ pipeline {
 }
             }
         }           
-    }
-    post {
-        always {
-            mail to: 'gonzalomaringomez@gmail.com',
-            subject: "Status of pipeline: ${currentBuild.fullDisplayName}",
-            body: "${env.BUILD_URL} has result ${currentBuild.result}"
-        }
     }
 }
