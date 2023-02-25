@@ -1,4 +1,5 @@
 FROM gonzalomarin/base-practica
+#FROM python:3
 WORKDIR /usr/src/app
 MAINTAINER Gonzalo Marin Gomez
 #RUN pip install django mysqlclient && git clone https://github.com/gonzalomaring/docker-django.git /usr/src/app && mkdir static  && apt-get clean && rm -rf /var/lib/apt/lists/*
